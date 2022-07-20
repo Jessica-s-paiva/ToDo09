@@ -1,8 +1,8 @@
 import React from 'react'
-
-const Botao = () => {
+import S from './Botao.module.css'
+const Botao = ({text}) => {
   return (
-    <button></button>
+    <button type='text' className={S.btn}>{text}</button>
   )
 }
 

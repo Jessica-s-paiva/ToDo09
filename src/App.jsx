@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
 import { Route, BrowserRouter } from "react-router-dom";
-import Header from './Components/Header/Header'
+import Header from './Components/Header/Header';
+import Botao from './Components/Botao/Botao';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <BrowserRouter>
-      
-      <Route>
-        <Route path="/header" component={<Header />} />
-      </Route>
+        <Header />
+
       </BrowserRouter>    
     </div>
   )
