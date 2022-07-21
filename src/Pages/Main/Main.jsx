@@ -7,7 +7,7 @@ import Compartilhamento from '../../Components/Compartilhamento/Compartilhamento
 import Footer from '../../Components/Footer/Footer';
 const Main = () => {
   return (
-    <div>
+    <>
         <section className={S.section1}>
             <section className={S.sectionA}>
                 <h2>Ajude o algorítimo a ser mais certeiro</h2>
@@ -27,9 +27,7 @@ const Main = () => {
           <Botoes text='Ainda mais produtos aqui!'/>
         </section>
         <Compartilhamento />
-        <Botoes text='Enviar agora'/>
-        <Footer />
-    </div>
+    </>
   )
 }
 
