@@ -8,3 +8,11 @@
 .sectionA{
     width: 60%
 }
+
+.sectionB{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

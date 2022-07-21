@@ -2,6 +2,9 @@ import React from 'react';
 import Form from '../../Components/Form/Form';
 import S from './Main.module.css';
 import Cards from '../../Components/Cards/Cards';
+import Botoes from '../../Components/Botoes/Botoes';
+import Compartilhamento from '../../Components/Compartilhamento/Compartilhamento';
+import Footer from '../../Components/Footer/Footer';
 const Main = () => {
   return (
     <div>
@@ -12,9 +15,20 @@ const Main = () => {
             </section>
             <Form />
         </section>
-        <section>
+        <section className={S.sectionB}>
           <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Botoes text='Ainda mais produtos aqui!'/>
         </section>
+        <Compartilhamento />
+        <Botoes text='Enviar agora'/>
+        <Footer />
     </div>
   )
 }
