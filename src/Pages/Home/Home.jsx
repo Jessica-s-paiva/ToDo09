@@ -1,11 +1,34 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Form from '../../Components/Form/Form';
-import S from './Main.module.css';
+import S from './Home.module.css';
 import Cards from '../../Components/Cards/Cards';
 import Botoes from '../../Components/Botoes/Botoes';
 import Compartilhamento from '../../Components/Compartilhamento/Compartilhamento';
 import Footer from '../../Components/Footer/Footer';
-const Main = () => {
+const Home = () => {
+  const [contador, setContador] = useState(1)
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    handleRequisition();
+  }, [])
+
+  function handleCount(){
+    setContador(contador + 1)
+  }
+
+  async function handleRequisition() {
+    // o numero depois de page tem q contar a cada clique
+    const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${contador}`;
+    const requisition = await fetch(url);
+    const json = await requisition.json();
+    const results = json.products;
+    setProducts(results);
+    handleCount();
+  }
+
+  function teste(){
+    console.log('deu bom');
+  }
   return (
     <>
         <section className={S.section1}>
@@ -16,19 +39,19 @@ const Main = () => {
             <Form />
         </section>
         <section className={S.sectionB}>
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
-          <Botoes text='Ainda mais produtos aqui!'/>
+          <section>
+            {
+              !!products && products.map((product, index)=>{
+                return (<Cards produto={product} key={index}/>)
+              })
+            }
+          </section>
+          <button onClick={handleRequisition}>Ainda mais produtos aqui!</button>
+          {/* <Botoes onClick={handleRequisition} text='Ainda mais produtos aqui!'/> */}
         </section>
         <Compartilhamento />
     </>
   )
 }
 
-export default Main
+export default Home
