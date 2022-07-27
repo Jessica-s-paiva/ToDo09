@@ -11,6 +11,14 @@
 
 .sectionB{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionCards{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

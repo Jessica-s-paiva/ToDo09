@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Destaque = ({text}) => {
+const Destaque = ({text, valor}) => {
   return (
-    <h4>{text}</h4>
+    <>
+    <h4>De: {text}</h4>
+    </>
   )
 }
 

@@ -6,13 +6,13 @@ const Cards = ({produto}) => {
   return (
     <section className={S.container}>
         <picture className={S.contentFoto}>
-            <img className={S.foto} />
+            <img src={produto.image} className={S.foto} />
         </picture>
-        <Destaque text={produto.name}/>
-        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-        <small>De: </small>
-        <Destaque text='Preço' />
-        <small>Ou: </small>
+        <h4>{produto.name}</h4>
+        <p>{produto.description}</p>
+        <h4>De: {produto.oldPrice},00</h4> 
+        <small>Por: {produto.price},00</small>
+        <small>Ou: {produto.installments.count}x de {produto.installments.value}</small>
         <Botao  text='Comprar' />
     </section>
   )

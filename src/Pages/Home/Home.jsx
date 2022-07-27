@@ -17,18 +17,15 @@ const Home = () => {
   }
 
   async function handleRequisition() {
-    // o numero depois de page tem q contar a cada clique
     const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${contador}`;
     const requisition = await fetch(url);
     const json = await requisition.json();
     const results = json.products;
     setProducts(results);
+    console.log(results);
     handleCount();
   }
 
-  function teste(){
-    console.log('deu bom');
-  }
   return (
     <>
         <section className={S.section1}>
@@ -39,7 +36,7 @@ const Home = () => {
             <Form />
         </section>
         <section className={S.sectionB}>
-          <section>
+          <section className={S.sectionCards}>
             {
               !!products && products.map((product, index)=>{
                 return (<Cards produto={product} key={index}/>)
