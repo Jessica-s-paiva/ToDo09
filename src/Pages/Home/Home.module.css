@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    text-align: justify;
 }
 
 .sectionA{
-    width: 60%
+    width: 50%;
+    padding: 80px 80px;
+
+
 }
 
 .sectionB{
@@ -18,6 +22,7 @@
 }
 
 .sectionCards{
+    padding-top: 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

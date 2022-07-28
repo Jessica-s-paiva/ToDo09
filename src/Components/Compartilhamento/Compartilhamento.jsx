@@ -6,8 +6,10 @@ const Compartilhamento = () => {
     <section>
         <h2>Compartilhe a novidade</h2>
         <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-        <label htmlFor="text">Nome do seu amigo: <input type="text" /></label>
-        <label htmlFor="email">E-mail: <input type="text" /></label>
+          <div className={S.nomeEmail}>
+            <label htmlFor="text">Nome do seu amigo: <input type="text" /></label>
+            <label htmlFor="email">E-mail: <input type="text" /></label>
+          </div>
         <Botoes text='Enviar agora'/>
     </section>
   )

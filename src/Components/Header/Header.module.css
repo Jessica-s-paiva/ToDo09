@@ -1,5 +1,5 @@
 header{
-    background-color: grey;
+    background-image: -webkit-linear-gradient(80deg, #fff 50%, #004E95 50%);  
     /* width: 1500px; */
     height: 300px;
     margin: 0;
@@ -8,4 +8,10 @@ header{
     justify-content: center;
     align-items: center;
     color: white;
+}
+.botoes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

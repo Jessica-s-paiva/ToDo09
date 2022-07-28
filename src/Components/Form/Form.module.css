@@ -4,3 +4,25 @@ form{
     align-items: center;
     width: 690px;
 }
+.forms{
+    padding-right: 50px;
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+.nome{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.genero{
+    border: solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
