@@ -13,6 +13,9 @@ const Header = () => {
             <Botao  text='Seus produtos'/>
             <Botao  text='Compartilhe'/>
         </div>
+        <div className={S.espaco}>
+
+        </div>
     </header>
   )
 }

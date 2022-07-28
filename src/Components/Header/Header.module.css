@@ -3,11 +3,12 @@ header{
     /* width: 1500px; */
     height: 300px;
     margin: 0;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+
 }
 .botoes{
     width: 100%;
@@ -15,3 +16,4 @@ header{
     flex-direction: row;
     justify-content: space-evenly;
 }
+

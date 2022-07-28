@@ -3,7 +3,7 @@ import S from './Botoes.module.css'
 
 const Botoes = ({text}) => {
   return (
-    <button>{text}</button>
+    <button className={S.btn}>{text}</button>
   )
 }
 
